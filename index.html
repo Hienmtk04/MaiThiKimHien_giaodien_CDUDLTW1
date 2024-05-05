@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        /* Custom CSS */
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .addCart:hover {
+            background-color: #95e0d2;
+            color: #95e0d2;
+            ;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header header-menu">
+        <div class="mb-2">
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="logo-center">
+                            <div class="logo">
+                                <a href="/" class="logo-wrapper">
+                                    <img src="assets/images/logo.webp" alt="lg Delta Cosmetic" style="height: 80px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 padding-0 mt-4">
+                        <div class="wrap_main hidden-xs hidden-sm">
+                            <div class="bg-header-nav hidden-xs hidden-sm">
+                                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item active" id="menu-item">
+                                            <a class="nav-link active" aria-current="page" href="/">TRANG CHỦ</a>
+                                        </li>
+                                        <li class="nav-item ms-3" id="menu-item">
+                                            <a class="nav-link active" aria-current="page" href="#">GIỚI THIỆU</a>
+
+                                        </li>
+                                        <li class="nav-item dropdown ms-3" id="dropdownMenu">
+                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/pages/product.html#"
+                                                id="navbarDropdownMenuLink">SẢN PHẨM</a>
+                                            <ul class="dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item mt-2" href="#">Sản phẩm nổi bật</a></li>
+                                                <li><a class="dropdown-item mt-2" href="#">Son môi</a></li>
+                                                <li><a class="dropdown-item mt-2" href="#">Kem dưỡng da</a></li>
+                                                <li><a class="dropdown-item mt-2 " href="#">Chăm sóc tóc</a></li>
+                                                <li><a class="dropdown-item mt-2" href="#">Chăm sóc mặt</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item ms-3" id="menu-item">
+                                            <a class="nav-link active" aria-current="page" href="#">TIN TỨC</a>
+
+                                        </li>
+                                        <li class="nav-item ms-3" id="menu-item">
+                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/pages/contact.html">LIÊN HỆ</a>
+
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 mt-4">
+                        <div class="row">
+                            <div class="inline-b hidden-xs col dropstart " id="userDropdown">
+                                <span class="imguser">
+                                    <img src="assets/images/user.webp" alt="user" id="userImage">
+                                    <ul class="dropdown-content" id="userDropdownContent">
+                                        <li class="btn btn-success rounded-fill mt-3" style="width: 100px"><a
+                                                class="dropdown-item mt-2" href="#">Đăng nhập</a></li>
+                                        <li class="btn border-secondary rounded-fill my-3" style="width: 100px"><a
+                                                class="dropdown-item mt-2" href="#">Đăng ký</a></li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <div class="inline-block col">
+                                <span class="">
+                                    <a href="#"><img src="assets/images/bag.webp" alt="cart"></a>
+                                </span>
+                            </div>
+                            <div class="inline-block col">
+                                <span class="search">
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass text-dark"></i></a>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-5">
+            <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/slider_1.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/slider_2.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/slider_1.webp" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="container">
+                <div class="section row" id="image-banner">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset_banner1">
+                        <a href="#" title="alt" class="block a-center">
+                            <img src="assets/images/banner_offset_1.webp" alt="alt">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset_banner2">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                            <a href="#" title="alt" class="block a-center">
+                                <img src="assets/images/banner_offset_2.webp" alt="alt">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section class="intro mt-5">
+        <div class="container section2 ">
+            <div class="title_module_bbf mt-5">
+                <h2>Giới thiệu</h2>
+                <span class="destitle">Giới thiệu về Delta Cosmetic Việt Nam</span>
+
+            </div>
+
+            <div class="descript justify-content-center">
+                <p>
+                    Công ty Delta Cosmetic Việt Nam trực tiếp sản xuất các dòng mỹ phẩm thiên nhiên- không theo trào lưu
+                    mỹ phẩm công nghiệp hiện hành,
+                    công ty đi theo hướng phát triển bền vững, lâu dài các dòng mỹ phẩm được làm handmade “BÀN TAY VÀ
+                    KHỐI ÓC CON NGƯỜI” làm chủ thể!
+                </p>
+                <span class="star_reviews text-warning">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="typeProduct ">
+        <div class=" section3 container">
+            <h5>CÁC DÒNG SẢN PHẨM CỦA DELTA COSMETIC VIỆT NAM</h5>
+            <div class="row mt-5 justify-content-center">
+                <a href="#" class="col-md-3 sp1" style="text-decoration: none; width:200px">
+                    <div class="item1">
+                        <h5 class="text-light">Son môi</h5>
+                        <p class="text-light">8 sản phẩm</p>
+                        <img src="assets/images/image_ab_1.webp" alt="son_moi">
+                    </div>
+                </a>
+
+                <a href="#" class="col-md-3 sp2 " style="text-decoration: none; width:200px">
+                    <div class="item2">
+                        <h5 class="text-light">Kem dưỡng da</h5>
+                        <p class="text-light">8 sản phẩm</p>
+                        <img src="assets/images/image_ab_2.webp" alt="duong_da">
+                    </div>
+                </a>
+
+                <a href="#" class="col-md-3 sp3" style="text-decoration: none; width:200px">
+                    <div class="item3">
+                        <h5 class="text-light">Chăm sóc tóc</h5>
+                        <p class="text-light">8 sản phẩm</p>
+                        <img src="assets/images/image_ab_3.webp" alt="duong_toc">
+                    </div>
+                </a>
+
+                <a href="#" class="col-md-3 sp4" style="text-decoration: none; width:200px">
+                    <div class="item4">
+                        <h5 class="text-light">Chăm sóc mặt</h5>
+                        <p class="text-light">8 sản phẩm</p>
+                        <img src="assets/images/image_ab_4.webp" alt="duong_mat">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="newProduct">
+        <div class="container section4">
+            <div class="title_module_bbf a-center section">
+                <h2 class="bf_flower">
+                    <a href="san-pham-noi-bat" title="Sản phẩm mới" class="text-dark" style="text-decoration: none;"><h3>Sản phẩm mới</h3></a>
+                </h2>
+                <span class="destitle">Bộ sưu tập sản phẩm mới nhất từ Delta Cosmetic</span>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/8a6dcb8e287174a7f949119dc28ca2.webp" alt="sua_tam"
+                                title="Sữa tắm Victoria's Secret quyến rũ">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Sữa tắm Victoria's Secret quyến rũ">Sữa tắm Victoria's
+                                    Secret...</h6>
+                                <div class="price">
+                                    <span class="text-danger">560.000đ</span>
+                                    <span class="text-secondary mx-2"><del>670.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/1.webp" alt="kem_chong_nang" title="Kem chống nắng AHA">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Kem chống nắng AHA">Kem chống nắng AHA</h6>
+                                <div class="price">
+                                    <span class="text-danger">350.000đ</span>
+                                    <span class="text-secondary mx-2"><del>370.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/1274ecabd26e54bcabcb0050da454e.webp" alt="dau_duong_da"
+                                title="Dầu dưỡng da Phyto..." class="border border-light">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Dầu dưỡng da Phytoceuticals Argan">Dầu dưỡng da
+                                    Phytoceuticals Argan</h6>
+                                <div class="price">
+                                    <span class="text-danger">169.000đ</span>
+                                    <span class="text-secondary mx-2"><del>196.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/3461949333418s01d20170826t1549.webp" alt="kem_duong_da"
+                                title="Kem dưỡng da AHA">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Kem dưỡng da AHA">Kem dưỡng da AHA</h6>
+                                <div class="price">
+                                    <span class="text-danger">420.000đ</span>
+                                    <span class="text-secondary mx-2"><del>450.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart "
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/156dc0eb7a087348e1b8c38613020e (1).webp" alt="nuoc_hoa"
+                                title="Nước hoa Dolce & Gabbana">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Nước hoa Dolce & Gabbana">Nước hoa Dolce & Gabbana</h6>
+                                <div class="price">
+                                    <span class="text-danger">148.000đ</span>
+                                    <span class="text-secondary mx-2"><del>270.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/facialtreatmentessence2 (1).webp" alt="tinh_chat_duong_da"
+                                title="Tinh chất dưỡng da SK-II Facial">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Tinh chất dưỡng da SK-II Facial">Tinh chất dưỡng da SK-II
+                                    Facial</h6>
+                                <div class="price">
+                                    <span class="text-danger">4100.000đ</span>
+                                    <span class="text-secondary mx-2"><del>4300.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart "
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- trendProduct----------------------------------------------------------------------- -->
+    <section class="trendPro">
+        <div class="container section4">
+            <div class="title_module_bbf a-center section">
+                <h2 class="bf_flower">
+                    <a href="san-pham-noi-bat" title="Sản phẩm mới" class="text-dark" style="text-decoration: none;"><h3>Sản phẩm xu hướng</h3></a>
+                </h2>
+                <span class="destitle">Những sản phẩm được khách hàng lựa chọn nhiều nhất</span>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="container p-3" style="text-align: center;">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="../assets/images/baremineralsoriginalfoundation.webp" alt="phan_nen"
+                                title="Phấn nền bareMinerals Original">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Phấn nền bareMinerals Original">Phấn nền bareMinerals
+                                    Original</h6>
+                                <div class="price">
+                                    <span class="text-danger">560.000đ</span>
+                                    <!-- <span class="text-secondary mx-2"><del>150.000đ</del></span> -->
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container  p-3" style="text-align: center;">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="../assets/images/8a6dcb8e287174a7f949119dc28ca2.webp" alt="sua_tam"
+                                title="Sữa tắm dạng kem Victoria’s Secret">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Sữa tắm dạng kem Victoria’s Secret">Sữa tắm dạng kem Victoria’s Secret</h6>
+                                <div class="price">
+                                    <span class="text-danger">860.000đ</span>
+                                    <span class="text-secondary mx-2"><del>930.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart" style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/1274ecabd26e54bcabcb0050da454e.webp" alt="dau_duong_da"
+                                title="Dầu dưỡng da Phyto..." class="border border-light">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Dầu dưỡng da Phytoceuticals Argan">Dầu dưỡng da
+                                    Phytoceuticals Argan</h6>
+                                <div class="price">
+                                    <span class="text-danger">169.000đ</span>
+                                    <span class="text-secondary mx-2"><del>196.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="container p-3" style="text-align: center;">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="../assets/images/10f387959a5a5a43fea8e5e43c4c69.webp" alt="nuoc_hoa"
+                                title="Nước hoa Versace Bright Crystal">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Nước hoa Versace Bright Crystal">Nước hoa Versace Bright Crystal</h6>
+                                <div class="price">
+                                    <span class="text-danger">1.000.000đ</span>
+                                    <!-- <span class="text-secondary mx-2"><del>150.000đ</del></span> -->
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart" style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/156dc0eb7a087348e1b8c38613020e (1).webp" alt="nuoc_hoa"
+                                title="Nước hoa Dolce & Gabbana">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Nước hoa Dolce & Gabbana">Nước hoa Dolce & Gabbana</h6>
+                                <div class="price">
+                                    <span class="text-danger">148.000đ</span>
+                                    <span class="text-secondary mx-2"><del>270.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="container">
+                        <a href="#" style="text-decoration: none;">
+                            <img src="assets/images/facialtreatmentessence2 (1).webp" alt="tinh_chat_duong_da"
+                                title="Tinh chất dưỡng da SK-II Facial">
+                            <div class="infoPro">
+                                <h6 class="text-dark" title="Tinh chất dưỡng da SK-II Facial">Tinh chất dưỡng da SK-II
+                                    Facial</h6>
+                                <div class="price">
+                                    <span class="text-danger">4100.000đ</span>
+                                    <span class="text-secondary mx-2"><del>4300.000đ</del></span>
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill addCart "
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add add_to_cart"
+                                            style="text-decoration: none; color: rgb(245, 12, 12);"
+                                            title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="awe-section-9 mt-5">
+        <section class="section_newletter">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-5 text-light">
+                        <h2>
+                            Đăng ký nhận tin
+                        </h2>
+                        <p>
+                            Bạn có thể đăng ký nhận tin khuyến mãi bất cứ lúc nào, những thông tin sẽ được gửi
+                            tới bạn
+                            nhanh nhất.
+                        </p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="mail_footer">
+                            <form class="margin-bottom-0 btn border-secondary rounded-fill ms-5" action="#"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                target="_blank">
+                                <input type="email" value="" placeholder="Nhập email của bạn" name="EMAIL" id="mail"
+                                    class="btn btn-light rounded-fill" style="width: 500px">
+                                <button class="btn btn-success subscribe" name="subscribe" id="subscribe"><i
+                                        class="fa fa-paper-plane"></i> Đăng ký</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <footer>
+        <div class="container justify-content-center mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 ">
+                    <h4 class="title-menu">
+                        <span>ĐỊA CHỈ</span>
+                    </h4>
+                    <hr class="text-success" style="font-size: 50px; width: 150px">
+                    <div class="mt-3">
+                        <i class="fa-solid fa-phone text-success me-4"></i>
+                        <span>19006750</span>
+                    </div>
+                    <div class="mt-3">
+                        <i class="fa-solid fa-location-dot text-success me-4"></i>
+                        <span>An Thượng, Hà Nội</span>
+                    </div>
+                    <div class="mt-3">
+                        <i class="fa-solid fa-envelope text-success me-4"></i>
+                        <span>deltawebltd@gmail.com</span>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <h4 class="title-menu">
+                        <span>HƯỚNG DẪN</span>
+                    </h4>
+                    <hr class="text-success" style="font-size: 50px; width: 150px">
+                    <div class="mt-3">
+                        <span>Trang chủ</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Giới thiệu</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Sản phẩm</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Tin tức</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Liên hệ</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="title-menu">
+                        <span>CHÍNH SÁCH</span>
+                    </h4>
+                    <hr class="text-success" style="font-size: 50px; width: 150px">
+                    <div class="mt-3">
+                        <span>Trang chủ</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Giới thiệu</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Sản phẩm</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Tin tức</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Liên hệ</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h4 class="title-menu">
+                        <span>CÂU HỎI THƯỜNG GẶP</span>
+                    </h4>
+                    <hr class="text-success" style=" width: 150px">
+                    <div class="mt-3">
+                        <span>Trang chủ</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Giới thiệu</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Sản phẩm</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Tin tức</span>
+                    </div>
+                    <div class="mt-3">
+                        <span>Liên hệ</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+            <div class="bg-footer-bottom copyright clearfix">
+                <div class="container">
+                    <div class="inner clearfix">
+                        <div class="row">
+                            <div id="copyright" class="col-md-10">
+                                <span class="wsp">
+                                    <span class="mobile">© Bản quyền thuộc về <b class="text-success">Delta
+                                            Web</b>
+                                        <span class="hidden-xs"> | </span>
+                                    </span>
+                                    <span class="opacity1">Cung cấp bởi</span>
+                                    <a href="#" rel="nofollow" title="Sapo" target="_blank"
+                                        class="text-success">Sapo</a>
+                                </span>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="#" class="backtop pc hidden-xs show text-success" title="Lên đầu trang">Lên đầu
+                                    trang <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+<script src="assets/js/main.js"></script>
+<script src="assets/jquery/jquery-3.7.1.min.js"></script>
+<script src="assets/fontawesome/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    // Owl Carousel initialization
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+</script>
+
+</html>
