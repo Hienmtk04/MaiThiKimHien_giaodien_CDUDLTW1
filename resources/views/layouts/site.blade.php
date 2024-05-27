@@ -29,6 +29,63 @@
             ;
 
         }
+
+        #userDropdown {
+            position: relative;
+        }
+
+        .search-container {
+            margin: 20px;
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search:hover .search-container {
+            display: block;
+            /* Show the search container when hovering over the icon */
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #007bff;
+        }
+
+        .search-button {
+            padding: 10px;
+            border: none;
+            background-color: #95e0d2;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #95e0d2;
+            color: #fff
+        }
+
+        .search-button i {
+            font-size: 16px;
+        }
     </style>
 
     @yield('header')
@@ -43,57 +100,22 @@
                         <div class="col-lg-3 col-md-3">
                             <div class="logo-center">
                                 <div class="logo">
-                                    <a href="/" class="logo-wrapper">
-                                        <img src="{{ asset('images/logo.webp') }}" alt="lg Delta Cosmetic" style="height: 80px;">
+                                    <a href="{{ route('site.home') }}" class="logo-wrapper">
+                                        <img src="{{ asset('images/logo.webp') }}" alt="lg Delta Cosmetic"
+                                            style="height: 80px;">
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-md-7 padding-0 mt-4">
-                            <div class="wrap_main hidden-xs hidden-sm">
-                                <div class="bg-header-nav hidden-xs hidden-sm">
-                                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <li class="nav-item active" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="/">TRANG CHỦ</a>
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="#">GIỚI THIỆU</a>
-    
-                                            </li>
-                                            <li class="nav-item dropdown ms-3" id="dropdownMenu">
-                                                <a class="nav-link active" aria-current="page"
-                                                    href="http://127.0.0.1:5500/pages/product.html#"
-                                                    id="navbarDropdownMenuLink">SẢN PHẨM</a>
-                                                <ul class="dropdown-content" aria-labelledby="navbarDropdownMenuLink">
-                                                    <li><a class="dropdown-item mt-2" href="#">Sản phẩm nổi bật</a></li>
-                                                    <li><a class="dropdown-item mt-2" href="#">Son môi</a></li>
-                                                    <li><a class="dropdown-item mt-2" href="#">Kem dưỡng da</a></li>
-                                                    <li><a class="dropdown-item mt-2 " href="#">Chăm sóc tóc</a></li>
-                                                    <li><a class="dropdown-item mt-2" href="#">Chăm sóc mặt</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page" href="#">TIN TỨC</a>
-    
-                                            </li>
-                                            <li class="nav-item ms-3" id="menu-item">
-                                                <a class="nav-link active" aria-current="page"
-                                                    href="http://127.0.0.1:5500/pages/contact.html">LIÊN HỆ</a>
-    
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
+                        {{-- Menu --}}
+                        <x-main-menu/>
                         <div class="col-lg-2 col-md-2 mt-4">
                             <div class="row">
                                 <div class="inline-b hidden-xs col dropstart " id="userDropdown">
                                     <span class="imguser">
                                         <img src="{{ asset('images/user.webp') }}" alt="user" id="userImage">
                                         <ul class="dropdown-content" id="userDropdownContent">
-                                            <li class="btn btn-success rounded-fill mt-3" style="width: 100px"><a
+                                            <li class="btn rounded-fill mt-3" style="width: 100px; background: #95e0d2"><a
                                                     class="dropdown-item mt-2" href="#">Đăng nhập</a></li>
                                             <li class="btn border-secondary rounded-fill my-3" style="width: 100px"><a
                                                     class="dropdown-item mt-2" href="#">Đăng ký</a></li>
@@ -102,59 +124,25 @@
                                 </div>
                                 <div class="inline-block col">
                                     <span class="">
-                                        <a href="#"><img src="{{ asset('images/bag.webp')}}" alt="cart"></a>
+                                        <a href="#"><img src="{{ asset('images/bag.webp') }}" alt="cart"></a>
                                     </span>
                                 </div>
-                                <div class="inline-block col">
+                                <div class="inline-b hidden-xs col dropstart " id="userDropdown">
                                     <span class="search">
-                                        <a href="#"><i class="fa-solid fa-magnifying-glass text-dark"></i></a>
+                                        <i class="fa-solid fa-magnifying-glass text-dark"></i>
+                                        <div class="search-container dropdown-content" id="userDropdownContent">
+                                            <form action="/search" method="GET" class="search-form">
+                                                <input type="text" name="query" class="search-input"
+                                                    placeholder="Tìm kiếm...">
+                                                <button type="submit" class="search-button">
+                                                    <i class="fa-solid fa-magnifying-glass text-dark"></i>
+                                                </button>
+                                            </form>
+                                        </div>
                                     </span>
                                 </div>
                             </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="my-5">
-                <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{ asset('images/slider_1.webp') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/slider_2.webp') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/slider_1.webp') }}" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span> 
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-    
-                <div class="container">
-                    <div class="section row" id="image-banner">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset_banner1">
-                            <a href="#" title="alt" class="block a-center">
-                                <img src="{{ asset('images/banner_offset_1.webp')}}" alt="alt">
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset_banner2">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <a href="#" title="alt" class="block a-center">
-                                    <img src="{{ asset('images/banner_offset_2.webp')}}" alt="alt">
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -185,7 +173,7 @@
                             <i class="fa-solid fa-envelope text-success me-4"></i>
                             <span>deltawebltd@gmail.com</span>
                         </div>
-    
+
                     </div>
                     <div class="col-md-3">
                         <h4 class="title-menu">
@@ -229,7 +217,7 @@
                             <span>Liên hệ</span>
                         </div>
                     </div>
-    
+
                     <div class="col-md-3">
                         <h4 class="title-menu">
                             <span>CÂU HỎI THƯỜNG GẶP</span>
@@ -251,9 +239,9 @@
                             <span>Liên hệ</span>
                         </div>
                     </div>
-    
+
                 </div>
-    
+
                 <hr>
                 <div class="bg-footer-bottom copyright clearfix">
                     <div class="container">
@@ -271,17 +259,18 @@
                                     </span>
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="#" class="backtop pc hidden-xs show text-success" title="Lên đầu trang">Lên đầu
+                                    <a href="#" class="backtop pc hidden-xs show text-success"
+                                        title="Lên đầu trang">Lên đầu
                                         trang <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
                                 </div>
-    
+
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
-    
+
         </footer>
     </footer>
     @yield('footer')
@@ -290,8 +279,8 @@
 <script src="{{ asset('jquery/jquery-3.7.1.min.js') }}"></script>
 <script src="{{ asset('fontawesome/js/all.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Owl Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

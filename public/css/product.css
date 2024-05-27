@@ -1,0 +1,46 @@
+.item1:hover {
+    border: 1px solid #94e3df;
+    border-radius: 20px;
+    color: #94e3df;
+}
+
+.addCart:hover {
+    background-color: #95e0d2;
+    color: #95e0d2;
+    ;
+
+}
+
+.item img {
+    width: 200px;
+    height: 220px;
+}
+
+.item {
+    height: 400px;
+}
+
+.bread-crumb {
+    background: #ece9e9;
+    border-top: solid 1px #ebebeb;
+    border-bottom: solid 2px #d1cfcf;
+}
+
+.scrollview {
+    width: auto;
+    height: 200px;
+    overflow: auto;
+    /* Cho phép cuộn khi nội dung vượt quá kích thước của scrollview */
+    padding-right: 20px;
+}
+
+.scrollview ul li a {
+    font-size: 15px;
+}
+.button_add{
+    color: #ba2c2c ;
+}
+.button_add:hover{
+    background-color: #ba2c2c;
+    color: white;
+}
