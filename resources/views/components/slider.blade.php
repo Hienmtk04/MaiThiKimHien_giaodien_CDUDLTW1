@@ -1,15 +1,11 @@
 <div class="my-5">
     <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel">
         <div class="carousel-inner">
+            @foreach ($list as $item)
             <div class="carousel-item active">
-                <img src="{{ asset('images/slider_1.webp') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset($item->image) }}" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/slider_2.webp') }}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/slider_1.webp') }}" class="d-block w-100" alt="...">
-            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">

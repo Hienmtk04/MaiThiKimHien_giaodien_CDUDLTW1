@@ -5,6 +5,8 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
+
 
 class AllProduct extends Component
 {
@@ -21,6 +23,7 @@ class AllProduct extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.all-product');
+        $list = DB::table('mtkh_product')->get();
+        return view('components.all-product', compact('list'));
     }
 }

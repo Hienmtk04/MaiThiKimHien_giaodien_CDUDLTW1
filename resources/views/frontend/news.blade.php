@@ -61,69 +61,24 @@
                     giản hơn bao giờ hết.
                 </p>
                 <div class="row mt-5 container">
-                    <div class="container item1 col-md-3 m-2 "
-                        style="width: 250px; height: 400px; text-align: center">
-                        <a href="#" style="text-decoration: none;">
-                            <img src="{{ asset('images/mat-na-duong-da-4311.webp') }}" style="width: 220px">
-                            <div style="width: 220px; text-align: center">
-                                <a href="" style="text-decoration: none">
-                                    <p class="text-dark">Chị em đua nhau uống colagen để căng da</p>
-                                </a>
-                                <button class='btn border detail mt-3'>
-                                    <span>Chi tiết &nbsp; <i class="fa-solid fa-angle-right"></i></span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="container item1 col-md-3 m-2 "
-                        style="width: 250px; height: 400px; text-align: center">
-                        <a href="#" style="text-decoration: none;">
-                            <img src="{{ asset('images/dung-nuoc-hoa-hong-39069.webp') }}" style="width: 220px">
-                            <div style="width: 220px; text-align: center">
-                                <a href="" style="text-decoration: none">
-                                    <p class="text-dark">Lớp trang điểm bền màu cả ngày nhờ 5 loại kem lót</p>
-                                </a>
-                                <button class='btn border detail mt-3'>
-                                    <span>Chi tiết &nbsp; <i class="fa-solid fa-angle-right"></i></span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="container item1 col-md-3 m-2 "
-                        style="width: 250px; height: 400px; text-align: center">
-                        <a href="#" style="text-decoration: none;">
-                            <img src="{{ asset('images/nuoc-hoa-hong-mira-culous-rose-soothing-facial-toner-1m4g3-7akdxr-simg-d0daf0-800x1200-max.webp') }}"
-                                style="width: 220px">
-                            <div style="width: 220px; text-align: center">
-                                <a href="" style="text-decoration: none">
-                                    <p class="text-dark">8 công dụng tuyệt vời của Toner hoa hồng sâm</p>
-                                </a>
-                                <button class='btn border detail mt-3'>
-                                    <span>Chi tiết &nbsp; <i class="fa-solid fa-angle-right"></i></span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="container item1 col-md-3 m-2 "
-                        style="width: 250px; height: 400px; text-align: center">
-                        <a href="#" style="text-decoration: none;">
-                            <img src="{{ asset('images/chong-nang-hieu-qua.webp') }}" style="width:220px">
-                            <div style="width: 220px; text-align: center">
-                                <a href="" style="text-decoration: none">
-                                    <p class="text-dark">Nhiều người không bao giờ thiếu kem chống nắng</p>
-                                </a>
-                                <button class='btn border detail mt-3'>
-                                    <span>Chi tiết &nbsp; <i class="fa-solid fa-angle-right"></i></span>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach ($list as $item)
+                        <div class="container item1 col-md-3 m-2 " style="width: 250px; height: 400px; text-align: center">
+                            <a href="#" style="text-decoration: none;">
+                                <img src="{{ asset($item->image) }}" style="width: 220px">
+                                <div style="width: 220px; text-align: center">
+                                    <a href="" style="text-decoration: none">
+                                        <p class="text-dark">{{ $item->title }}</p>
+                                    </a>
+                                    <button class='btn border detail mt-3'>
+                                        <span>Chi tiết &nbsp; <i class="fa-solid fa-angle-right"></i></span>
+                                    </button>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-            <hr/>
+            <hr />
         </section>
     </body>
 

@@ -86,6 +86,19 @@
         .search-button i {
             font-size: 16px;
         }
+
+        .sp5 {
+            width: 150px;
+            background-color: #90bfe3;
+            border-radius: 10px;
+            margin-left: 20px;
+            color: white;
+
+        }
+
+        .item5 {
+            padding: 20px;
+        }
     </style>
 
     @yield('header')
@@ -108,15 +121,15 @@
                             </div>
                         </div>
                         {{-- Menu --}}
-                        <x-main-menu/>
+                        <x-main-menu />
                         <div class="col-lg-2 col-md-2 mt-4">
                             <div class="row">
                                 <div class="inline-b hidden-xs col dropstart " id="userDropdown">
                                     <span class="imguser">
                                         <img src="{{ asset('images/user.webp') }}" alt="user" id="userImage">
                                         <ul class="dropdown-content" id="userDropdownContent">
-                                            <li class="btn rounded-fill mt-3" style="width: 100px; background: #95e0d2"><a
-                                                    class="dropdown-item mt-2" href="#">Đăng nhập</a></li>
+                                            <li class="btn rounded-fill mt-3" style="width: 100px; background: #95e0d2">
+                                                <a class="dropdown-item mt-2" href="#">Đăng nhập</a></li>
                                             <li class="btn border-secondary rounded-fill my-3" style="width: 100px"><a
                                                     class="dropdown-item mt-2" href="#">Đăng ký</a></li>
                                         </ul>

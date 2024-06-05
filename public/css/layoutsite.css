@@ -193,6 +193,18 @@ body{
 .item4{
     padding: 20px;
 }
+.sp5{
+    width: 150px;
+    background-color: #7fb9e6;
+    border-radius: 10px;
+    margin: 20px;
+    color: white;
+
+}
+.item5{
+    padding: 20px;
+}
+
 
 .searchmini {
     width: 200px;

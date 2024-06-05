@@ -87,7 +87,7 @@
                                         style="color: #94e3df;"></i>&nbsp;</span>
                             </li>
 
-                            <li><strong><span style="color: #94e3df;">Nước hoa Yves Saint Laurent Black</span></strong></li>
+                            <li><strong><span style="color: #94e3df;">{{ $list->name }}</span></strong></li>
 
                         </ul>
                     </div>
@@ -99,13 +99,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ asset('images/product3.webp') }}" alt="nước hoa"
-                            title="Nước hoa Yves Saint Laurent Black" class="border" style="width: 400px; height: 400px;">
+                        <img src="{{ asset($list->image) }}" alt="{{ $list->name }}" title={{ $list->name }}
+                            class="border" style="width: 400px; height: 400px;">
                     </div>
                     <div class="col-md-6">
                         <div class=" details-pro">
                             <div class="info">
-                                <h1 class="title-product">Nước hoa Yves Saint Laurent Black</h1>
+                                <h1 class="title-product">{{ $list->name }}</h1>
                                 <div class="brand">
                                     <span class="star_reviews text-secondary opacity-25">
                                         <i class="fa fa-star"></i>
@@ -122,22 +122,17 @@
                                 </div>
                                 <hr>
                                 <div class="price">
-                                    <p class="text-danger h3">1.350.000đ</p>
+                                    @if ($list->pricesale)
+                                        <span class="text-danger h3">{{ $list->pricesale }}đ</span>
+                                        <span class="text-secondary mx-2"><del>{{ $list->price }}đ</del></span>
+                                    @else
+                                        <h3 class="text-danger">{{ $list->price }}đ</h3>
+                                    @endif
                                 </div>
                                 <div class="description">
-                                    <p
-                                        title="Black Opium, là hương nước hoa mang phong vị của hoa cỏ cà phê đầu tiên của Yves
-                                Saint Laurent. Năng lượng của cà phê đen thống trị toàn bộ hương nước hoa của những
-                                bông hoa trắng với sự nữ tính quyết đoán bằng sự nổi bật của hồ tiêu hồng và trái lê
-                                làm nền phía sau. Trong lớp cuối, tất cả được cân bằng với sự ngọt ngào quyến rũ của
-                                vani và gỗ tuyết tùng làm mùi hương trở nên năng động, gợi cảm và hoàn toàn có thể
-                                gây nghiện đúng với tên gọi của nó.">
-                                        Black Opium, là hương nước hoa mang phong vị của hoa cỏ cà phê đầu tiên của Yves
-                                        Saint Laurent. Năng lượng của cà phê đen thống trị toàn bộ hương nước hoa của những
-                                        bông hoa trắng với sự nữ tính quyết đoán bằng sự nổi bật của hồ tiêu hồng và trái lê
-                                        làm nền phía sau. Trong lớp cuối, tất cả được cân bằng với sự ngọt ngào quyến rũ của
-                                        vani và gỗ tuyết tùng làm mùi hương trở nên năng động, gợi cảm và hoàn toàn có thể
-                                        gây nghiện đúng với tên gọi của nó.</p>
+                                    <p title={{ $list->description }} >
+                                        <b>{{ $list->description }}</b>
+                                    </p>
                                 </div>
                                 <div class="quality">
                                     <div class="d-flex align-items-center mb-4 pt-2 ">

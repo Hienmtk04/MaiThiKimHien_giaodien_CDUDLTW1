@@ -4,6 +4,8 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\View\Component;
 
 class NewProduct extends Component
@@ -21,6 +23,10 @@ class NewProduct extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.new-product');
+        $list = DB::table('mtkh_product')
+              ->orderBy('created_at', 'desc')
+              ->limit(6)
+              ->get();
+        return view('components.new-product', compact('list'));
     }
 }

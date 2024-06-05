@@ -64,6 +64,7 @@
             .button_add {
                 color: #fc3e3e;
             }
+
             .button_add:hover {
                 background-color: #fc3e3e;
                 color: white;
@@ -104,26 +105,16 @@
 
             <div class="row ">
                 <div class="col-md-2 mt-5">
-                    {{-- category --}} 
-                    <div class="category mt-2">
-                        <div class="name container">
-                            <h6 style="font-size: 20px;"><b>Danh mục sản phẩm</b></h6>
-                        </div>
-                        <ul class="list ms-0">
-                            <li class="list-item"><a href="#" class="text-dark">Kem dưỡng da</a></li>
-                            <li class="list-item"><a href="#" class="text-dark">Chăm sóc da</a></li>
-                            <li class="list-item"><a href="#" class="text-dark">Chăm sóc mặt</a></li>
-                            <li class="list-item"><a href="#" class="text-dark">Son môi</a></li>
-                        </ul>
-                    </div>
+                    {{-- category --}}
+                    <x-category-of-product/>
 
                     {{-- brand --}}
-                    <x-brand/>
+                    <x-brand-of-product />
                 </div>
 
                 {{-- All Product --}}
-                <x-all-product/>
-                
+                <x-all-product />
+
                 <hr />
 
             </div>

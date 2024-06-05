@@ -5,24 +5,54 @@
         </b>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <label for="select"><b>Ưu tiên xem: </b></label>
-            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"> <input
-                    class="nav-item " type="checkbox" name="new" id="newPro"> Hàng mới về</a>
-            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"><input
-                    class="nav-item" type="checkbox" name="new" id="oldPro"> Hàng cũ nhất</a>
-            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"> <input
-                    class="nav-item" type="checkbox" name="new" id="increPrice"> Giá tăng dần</a>
-            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"> <input
-                    class="nav-item" type="checkbox" name="new" id="decrePrice"> Giá giảm dần</a>
+            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"> <input class="nav-item "
+                    type="checkbox" name="new" id="newPro"> Hàng mới về</a>
+            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"><input class="nav-item"
+                    type="checkbox" name="new" id="oldPro"> Hàng cũ nhất</a>
+            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"> <input class="nav-item"
+                    type="checkbox" name="new" id="increPrice"> Giá tăng dần</a>
+            <a href="" style="text-decoration: none; color: black" class="item1 mx-3"> <input class="nav-item"
+                    type="checkbox" name="new" id="decrePrice"> Giá giảm dần</a>
         </nav>
     </div>
 
     <hr>
 
 
-    <div class="product">
-
-        <!-- product1------------------------------------------------ -->
-        <div class="row">
+    <div class="product" style="text-align: center">
+        @foreach ($list as $item)
+            <div class="col-md-3" style="float: left; margin: 30px">
+                <div class="item border">
+                    <div class="container p-3" style="text-align: center;">
+                        <a href="{{ route('site.product.detail', ['slug' => $item->slug]) }}" style="text-decoration: none;">
+                            <img src="{{ asset($item->image) }}" alt={{ $item->name }} title={{ $item->name }}>
+                            <div class="infoPro">
+                                <h6 class="text-dark" title={{ $item->name }}>{{ $item->name }} </h6>
+                                <div class="price">
+                                    @if ($item->pricesale)
+                                        <span class="text-danger">{{ $item->pricesale }}đ</span>
+                                        <span class="text-secondary mx-2"><del>{{ $item->price }}đ</del></span>
+                                    @else
+                                        <span class="text-danger">{{ $item->price }}đ</span>
+                                    @endif
+                                </div>
+                                <form action="/cart/add" method="post"
+                                    class="variants form-nut-grid btn border-danger rounded-fill add_Cart"
+                                    data-id="product-actions-14341653" enctype="multipart/form-data">
+                                    <div class="group_action">
+                                        <input type="hidden" name="variantId" value="24344327">
+                                        <a class="button_add" style="text-decoration: none;" title="Thêm vào giỏ">
+                                            <b>THÊM GIỎ HÀNG</b>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+        {{-- <div class="row">
             <div class="col-md-3">
                 <div class="item border">
                     <div class="container p-3" style="text-align: center;">
@@ -402,6 +432,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>

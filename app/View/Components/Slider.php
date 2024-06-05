@@ -5,6 +5,8 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
+
 
 class Slider extends Component
 {
@@ -21,6 +23,7 @@ class Slider extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.slider');
+        $list = DB::table('mtkh_banner')->get();
+        return view('components.slider', compact('list'));
     }
 }
